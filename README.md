@@ -12,6 +12,7 @@
 4. 中文文本校正功能的部分语法规则参考了 github.com/sparanoid/chinese-copywriting-guidelines 中的内容。
 
 【贡献者(帮助修复、改进、推广、翻译了本项目的个人或组织）】
+
 （暂无)
 
 ---
