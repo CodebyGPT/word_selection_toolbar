@@ -60,7 +60,7 @@
 |🧩 Feature|优化网页划词-提取超链接识别规则|现有的识别规则太过宽泛（例如会把“abcd.efg”也识别成超链接），计划内置一个常见的顶级域名列表来解决|高|
 |🧩 Feature|实现文本中转框功能|默认显示为一个贴边悬浮缩略图，用户划词后可拖动丢进中转框内，中转框内有记录时默认展开显示，并且在所有标签页中都可见，用户可以将单条记录拖出来，也可以多选记录后按选择顺序进行换行拼接后复制或首尾拼接后复制，以此实现多条文本跨 Tab 流转体验|中|
 |🧩 Feature|实现大爆炸功能|通过热键（默认 Tab 键）进入，在大爆炸模式下用户可以直接在页面中多选文本，同时创建一个独立的文本中转框用于实时记录|需等待文本中转框功能实现|
-|🧩 Feature|实现划词翻译功能|借助 Google Chrome 在138+ 开始提供的 Translator and Language Detector APIs 实现划词后纯离线零延迟翻译体验。细节：代码和被英文双引号框住的文本不进行翻译|低|
+|🧩 Feature|实现划词翻译功能|借助 Google Chrome 在138+ 开始提供的 Translator and Language Detector APIs 实现划词后纯离线零延迟翻译体验。自动跳过代码段、含超链接的文本和被英文双引号框住的文本|低|
 |🧩 Feature|实现一致性检测功能|默认开启。1、监听到复制事件时将用户当前选中的文本与剪贴板中的数据进行比较，若不一致则通过GM_notification警告用户；2、检测到用户选中的文本包含隐藏的或屏幕外的元素时警告用户；3、在非原创内容声明中增加：参考自github.com/roedesh/copyguard，演示地址：https://codingcheats.io/copy/、https://ruud.je/always-double-check-what-you-copy-from-websites|中|
 |🧩 Feature|光标移至pre:has(code)代码块内时，显示复制全部按钮|默认关闭|中|
 |🧩 Feature|光标移至textarea/input/富文本编辑器内时，显示清空按钮|默认关闭|中|
