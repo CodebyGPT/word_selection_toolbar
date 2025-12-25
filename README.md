@@ -26,7 +26,7 @@
 
 推荐前往 **Greasy Fork** 安装，已设置源代码同步，支持自动更新🔄️：[https://greasyfork.org/zh-CN/scripts/558720-pickit](https://greasyfork.org/zh-CN/scripts/558720-pickit)
 
-用户脚本管理器推荐：Chromium 138+：[ScriptCat](https://docs.scriptcat.org/)；旧版 Chromium、Firefox：[Violentmonkey](https://violentmonkey.github.io/)、[ScriptCat v0.16.x](https://github.com/scriptscat/scriptcat/releases/tag/v0.16.11)。
+用户脚本管理器推荐：Chromium 138+：[ScriptCat](https://docs.scriptcat.org/)；旧版 Chromium、Firefox：[Violentmonkey](https://violentmonkey.github.io/)、[ScriptCat（v0.16.x）](https://github.com/scriptscat/scriptcat/releases/tag/v0.16.11)。
 
 ## 基本特性
 
