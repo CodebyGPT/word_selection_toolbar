@@ -51,7 +51,7 @@
 
 |类型|事项|详情|优先级|
 | :--------  | :--------  | :-----  | :----:  |
-|👾 Bug|超级取词（Unlock Mode）在部分网站无法按预期工作|1、在https://rehtt.com/中无法划取文本|常驻|
+|👾 Bug|超级取词（Unlock Mode）在部分网站无法按预期工作|1、在 https://rehtt.com/ 中无法划取文本|常驻|
 |👾 Bug|更换输入框划词-高亮按钮的 SVG 图标|需要更换成“荧光笔笔头”或者“画笔刷“的图案|高|
 |👾 Bug|优化剪切按钮的逻辑|剪切逻辑在某些网页中无法正常删除选中的文字，例如markdown.lovejade.cn|中|
 |👾 Bug|闪电粘贴无法触发能被网页捕获到的粘贴事件|修改粘贴逻辑以解决（例如百度翻译fanyi.baidu.com，粘贴文本后无法即时发起翻译）|中|
@@ -65,7 +65,7 @@
 |🧩 Feature|拖拽预览增加点击父窗口自动关闭子窗口（预览弹窗）功能|1、需要实现跨标签页和跨域通信，且避免轮询；2、需要适配有前置跳转页面的网页，打开这类网页时如果不做处理会使子窗口断开与父窗口的关联，导致点击父窗口无法关闭子窗口|中|
 |🧩 Feature|实现文本中转框功能|默认显示为一个贴边悬浮缩略图，用户划词后可拖动丢进中转框内，中转框内有记录时默认展开显示，并且在所有标签页中都可见，用户可以将单条记录拖出来，也可以多选记录后按选择顺序进行换行拼接后复制或首尾拼接后复制，以此实现多条文本跨 Tab 流转体验|中|
 |🧩 Feature|实现大爆炸功能|通过热键（默认 Tab 键）进入，在大爆炸模式下用户可以直接在页面中多选文本，同时创建一个独立的文本中转框用于实时记录|需等待文本中转框功能实现|
-|🧩 Feature|实现一致性检查功能|该功能默认开启。1、监听到复制事件时将用户当前选中的文本与剪贴板中的数据进行比较，若不一致则通过GM_notification警告用户；2、检测到用户选中的文本包含隐藏的或屏幕外的元素时警告用户；3、在非原创内容声明中增加：参考自github.com/roedesh/copyguard，演示地址：https://codingcheats.io/copy/、https://ruud.je/always-double-check-what-you-copy-from-websites|中|
+|🧩 Feature|实现一致性检查功能|该功能默认开启。1、监听到复制事件时将用户当前选中的文本与剪贴板中的数据进行比较，若不一致则通过GM_notification警告用户；2、检测到用户选中的文本包含隐藏的或屏幕外的元素时警告用户；3、在非原创内容声明中增加：参考自github.com/roedesh/copyguard，演示地址：https://codingcheats.io/copy/ 、https://ruud.je/always-double-check-what-you-copy-from-websites|中|
 |🧩 Feature|光标移至pre:has(code)代码块内时，显示复制全部按钮|默认关闭|中|
 |🧩 Feature|光标移至textarea/input/富文本编辑器内时，显示清空按钮|默认关闭|中|
 |🧩 Feature|优化 UI 的Liquid Glass 效果|目前的 UI 是普通毛玻璃在左上角和右下角贴了一层伪反光模仿Liquid Glass，实际不是Liquid Glass|低|
