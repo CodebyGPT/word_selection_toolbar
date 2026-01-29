@@ -36,8 +36,8 @@ https://github.com/user-attachments/assets/bd574c71-a9dc-440e-bb6c-eaf9a47f61ce
 * UI 模仿 Apple Liquid Glass 风格
 * 适配多语言（目前通过机器翻译支持了英语 en 和俄语 ru）
 * 注重低内存占用
-* 默认设置下不对网页进行任何侵入式修改，且脚本运行在独立的沙盒中（依赖 TM 的 @sandbox DOM 或 VM、SC 的 @inject-into content），保证不影响任何网页正常运作
 * 事件驱动，避免轮询等 CPU 密集型代码
+* 默认情况下不对网页进行任何侵入式修改，且脚本运行在独立的沙盒中（依赖脚本管理器实现）避免污染网页
 * 100% 离线运行
 * 无混淆代码，无商业或恶意行为
 
