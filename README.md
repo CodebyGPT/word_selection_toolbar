@@ -56,6 +56,7 @@ https://github.com/user-attachments/assets/bd574c71-a9dc-440e-bb6c-eaf9a47f61ce
 |类型|事项|详情|优先级|
 | :--------  | :--------  | :-----  | :----:  |
 |👾 Bug|超级取词（Unlock Mode）在部分网站无法按预期工作|1、在 https://rehtt.com/ 中无法划取文本|常驻|
+|👾 Bug|超链接提取规则待完善|1、文本【天翼云盘：https://cloud.189.cn/t/3yqYreieuUFv(访问码:cpn0)】被识别成了链接【https://cloud.189.cn/t/3yqYreieuUFv(:cpn0】|高|
 |👾 Bug|更换输入框划词-高亮按钮的 SVG 图标|需要更换成“荧光笔笔头”或者“画笔刷“的图案|高|
 |👾 Bug|优化剪切按钮的逻辑|剪切逻辑在某些网页中无法正常删除选中的文字，例如markdown.lovejade.cn|中|
 |👾 Bug|闪电粘贴无法触发能被网页捕获到的粘贴事件|修改粘贴逻辑以解决（例如百度翻译fanyi.baidu.com，粘贴文本后无法即时发起翻译）|中|
