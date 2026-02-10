@@ -1,4 +1,4 @@
-# 为浏览器带来网页划词工具栏功能，只需单击鼠标左键即可完成每一次的复制或搜索。（支持多语言）
+# 为桌面浏览器带来快捷划词栏功能
 【🤖 AICG 声明】
 
 脚本的大部分代码参考或使用了 Gemini 3 Pro Preview、ChatGPT、Kimi K2、Qwen3-Max 等 LLM 的输出结果。
@@ -18,7 +18,9 @@
 
 ## 这是什么？
 
-https://github.com/user-attachments/assets/bd574c71-a9dc-440e-bb6c-eaf9a47f61ce
+
+https://github.com/user-attachments/assets/69d95ccf-f925-44a3-aaca-ce945f9dad34
+
 
 这是一个油猴脚本（UserScript）。最初的目标是在 Chrome、Firefox 等原生浏览器中复刻 360 浏览器、Microsoft Edge 等魔改浏览器内建的划词栏功能，因为我不想每次复制文本都需要按一次鼠标右键或者 Ctrl+C 快捷键，于是借助 AI 写了一个简单的划词复制脚本，后来想法越来越多，最终用 AI 拼凑出了这款增强效率类油猴脚本。
 
@@ -88,4 +90,4 @@ https://github.com/user-attachments/assets/bd574c71-a9dc-440e-bb6c-eaf9a47f61ce
 
 ---
 
-我并不具备专业编程知识，所以维护这个项目比较消耗时间精力，欢迎感兴趣的朋友参与改进或者接手开发本项目，对本项目的任何借鉴、修改或转载均不需要经过我的许可。❤️
+我并不具备专业编程知识，维护这个项目比较消耗时间精力，所以对本项目的任何借鉴、修改、转载、发布均无需取得我的同意或许可，欢迎感兴趣的朋友参与改进或者接手开发本项目。❤️
