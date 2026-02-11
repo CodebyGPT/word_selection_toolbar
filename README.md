@@ -5,7 +5,7 @@
 
 【💡 非原创内容声明】
 
-1. Icon 来自 allsvgicons.com 提供的 material-symbols:touch-triple。
+1. 本脚本使用的部分图标来自 allsvgicons.com、iconpark.bytedance.com 等网站。
 2. 脚本的大部分代码参考或使用了 Gemini 3 Pro Preview、ChatGPT、Kimi K2、Qwen3-Max 等 LLM 的输出结果。
 3. 快速粘贴网盘提取码功能参考了 greasyfork.org/zh-CN/scripts/445489-网盘链接识别、greasyfork.org/zh-CN/scripts/439266-网盘有效性检查、github.com/Magiclyan/panAI（forked from syhyz1990/panAI）等脚本。
 4. 中文文本校正功能参考了 github.com/sparanoid/chinese-copywriting-guidelines 项目。
@@ -57,7 +57,6 @@ https://github.com/user-attachments/assets/83e9ec57-d8df-476c-ba36-2f45f7cd75eb
 | :--------  | :--------  | :-----  | :----:  |
 |👾 Bug|超级取词（Unlock Mode）在部分网站无法按预期工作|1、在 https://rehtt.com/ 中无法划取文本；2、无法划取部分元素中的文本|常驻|
 |👾 Bug|超链接提取规则待完善|1、文本【天翼云盘：https://cloud.189.cn/t/3yqYreieuUFv(访问码:cpn0)】被识别成了链接【https://cloud.189.cn/t/3yqYreieuUFv(:cpn0】；2、文本【5日iPhone 历代壁纸https://www.aliyundrive.com/s/rxUp6HNpwP8点击链接保存,或者复制本段内容,打开「阿里云盘」APP ,无】被识别为了链接【https://www.aliyundrive.com/s/rxUp6HNpwP8,,「」APP】|高|
-|👾 Bug|更换输入框划词-高亮按钮的 SVG 图标|需要更换成“荧光笔笔头”或者“画笔刷“的图案|高|
 |👾 Bug|优化剪切按钮的逻辑|剪切逻辑在某些网页中无法正常删除选中的文字，例如markdown.lovejade.cn|中|
 |👾 Bug|闪电粘贴无法触发能被网页捕获到的粘贴事件|修改粘贴逻辑以解决（例如百度翻译fanyi.baidu.com，粘贴文本后无法即时发起翻译）|中|
 |👾 Bug|修复超级取词-完整选取被折叠的文本功能|该功能会造成某些文本显示位置发生错位，例如百度搜索结果页右侧栏中的“弹幕互动”|中|
@@ -84,6 +83,7 @@ https://github.com/user-attachments/assets/83e9ec57-d8df-476c-ba36-2f45f7cd75eb
 |🧩 Feature|支持放大查看图片|仿淘宝京东商品图片放大预览|待定|
 |💡 Other|为项目创建 GitHub Page|（同左）|待定|
 |💡 Other|优化代码逻辑、结构和可读性|（同左）|低|
+|~~👾 Bug~~|~~更换高亮按钮的 SVG 图标~~|~~更换成“荧光笔笔头”或者“画笔刷”的图案~~|已完成|
 |~~🧩 Feature~~|~~增加切换开关，允许用户1、当网页滚动或resize时使按钮消失，而不是重绘；2、当网页滚动或resize时，如果锚点仍在视口内就仍然重绘按钮，超出锚点不再重绘~~|~~（同左）~~|已完成|
 
 ---
