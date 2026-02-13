@@ -26,7 +26,7 @@ https://github.com/user-attachments/assets/fb64dc93-37e7-421f-bc5d-89a8ef43b7c8
 
 ## 如何安装
 
-推荐前往 **Greasy Fork** 安装（已设置源代码自动同步🔄️）：[https://greasyfork.org/zh-CN/scripts/558720-pickit](https://greasyfork.org/zh-CN/scripts/558720-pickit)
+推荐前往 **Greasy Fork** 安装（已设置源代码自动同步🔄️）：[https://greasyfork.org/zh-CN/scripts/558720](https://greasyfork.org/zh-CN/scripts/558720)
 
 用户脚本管理器推荐：Chromium 138+：[ScriptCat](https://docs.scriptcat.org/)；旧版 Chromium、Firefox：[Violentmonkey](https://violentmonkey.github.io/)、[ScriptCat（v0.16.x）](https://github.com/scriptscat/scriptcat/releases/tag/v0.16.11)。
 
