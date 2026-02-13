@@ -18,7 +18,7 @@
 
 ## 这是什么？
 
-https://github.com/user-attachments/assets/83e9ec57-d8df-476c-ba36-2f45f7cd75eb
+https://github.com/user-attachments/assets/fb64dc93-37e7-421f-bc5d-89a8ef43b7c8
 
 这是一个油猴脚本（UserScript）。最初的目标是在 Chrome、Firefox 等原生浏览器中复刻 360 浏览器、Microsoft Edge 等魔改浏览器内建的划词栏功能，因为我不想每次复制文本都需要按一次鼠标右键或者 Ctrl+C 快捷键，于是借助 AI 写了一个简单的划词复制脚本，后来想法越来越多，最终用 AI 拼凑出了这款增强效率类油猴脚本。
 
