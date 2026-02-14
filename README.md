@@ -1,18 +1,14 @@
 # 为桌面浏览器带来快捷划词栏功能
-【🤖 AICG 声明】
 
-脚本的大部分代码参考或使用了 Gemini 3 Pro Preview、ChatGPT、Kimi K2、Qwen3-Max 等 LLM 的输出结果。
+🤖 AICG 声明：
+脚本的大部分代码参考或直接使用了 Gemini 3 Pro Preview、ChatGPT、Kimi K2、Qwen3-Max 等 LLM 的输出结果。
 
-【💡 非原创内容声明】
+🧑‍💻 非原创内容声明：
 
 1. 本脚本使用的部分图标来自 allsvgicons.com、iconpark.bytedance.com 等网站。
 2. 脚本的大部分代码参考或使用了 Gemini 3 Pro Preview、ChatGPT、Kimi K2、Qwen3-Max 等 LLM 的输出结果。
 3. 快速粘贴网盘提取码功能参考了 greasyfork.org/zh-CN/scripts/445489-网盘链接识别、greasyfork.org/zh-CN/scripts/439266-网盘有效性检查、github.com/Magiclyan/panAI（forked from syhyz1990/panAI）等脚本。
 4. 中文文本校正功能参考了 github.com/sparanoid/chinese-copywriting-guidelines 项目。
-
-【🧑‍💻 社区贡献名单（主动帮助改进、推广、翻译本项目）】
-
-暂无
 
 ---
 
@@ -20,24 +16,24 @@
 
 https://github.com/user-attachments/assets/fb64dc93-37e7-421f-bc5d-89a8ef43b7c8
 
-这是一个油猴脚本（UserScript）。最初的目标是在 Chrome、Firefox 等原生浏览器中复刻 360 浏览器、Microsoft Edge 等魔改浏览器内建的划词栏功能，因为我不想每次复制文本都需要按一次鼠标右键或者 Ctrl+C 快捷键，于是借助 AI 写了一个简单的划词复制脚本，后来想法越来越多，最终用 AI 拼凑出了这款增强效率类油猴脚本。
+这是一个油猴脚本（UserScript）。最初的目标是在 Chrome、Firefox 等原生浏览器中复刻 360 浏览器、Microsoft Edge 等魔改浏览器内建的划词快捷工具栏功能，因为我不想每次复制文本都需要按下鼠标右键或者 Ctrl+C 快捷键，于是借助 AI 写了一个简单的选取文本后快速复制的脚本，后来想法越来越多，最终拼凑出了这款功能更丰富的油猴脚本。
 
-选择用油猴脚本而不是用浏览器扩展实现这个项目，是因为油猴脚本支持一次编写多平台通用，且没有签名、编译等流程，开发和后续维护门槛远低于浏览器扩展。但代价是油猴脚本的权限更低，导致无法实现某些高级功能，欢迎感兴趣的大佬将该项目重新实现浏览器扩展。
+之所以选择用油猴脚本而不是用浏览器扩展来实现，是因为油猴脚本一次编写多平台通用，并且无需经过签名、编译等流程即可发布，开发成本和门槛更低，但代价是油猴脚本在浏览器中的权限层级也更低，导致无法实现某些功能，所以欢迎所有感兴趣的开发者将该项目实现为浏览器扩展。
 
-## 如何安装
+## 如何安装？
 
-推荐前往 **Greasy Fork** 安装（已设置源代码自动同步🔄️）：[https://greasyfork.org/zh-CN/scripts/558720](https://greasyfork.org/zh-CN/scripts/558720)
+推荐优先前往[**Greasy Fork**](https://greasyfork.org/zh-CN/scripts/558720)安装，[Github Releases](https://github.com/CodebyGPT/word_selection_toolbar/releases)中的脚本不支持自动更新。
 
-用户脚本管理器推荐：Chromium 138+：[ScriptCat](https://docs.scriptcat.org/)；旧版 Chromium、Firefox：[Violentmonkey](https://violentmonkey.github.io/)、[ScriptCat（v0.16.x）](https://github.com/scriptscat/scriptcat/releases/tag/v0.16.11)。
+如果你是第一次安装用户脚本，必须先在浏览器中安装用户脚本管理器：Chromium 138+ 推荐使用：[ScriptCat](https://docs.scriptcat.org/)；旧版 Chromium 和 Firefox 浏览器推荐使用：[Violentmonkey](https://violentmonkey.github.io/)、[ScriptCat（v0.16.x）](https://github.com/scriptscat/scriptcat/releases/tag/v0.16.11)。
 
 ## 基本特性
 
-* UI 模仿 Apple Liquid Glass 风格
-* 适配多语言（目前通过机器翻译支持了英语 en 和俄语 ru）
+* 用户界面模仿 Apple Liquid Glass 风格
+* 适配多语言（通过机器翻译支持）
 * 注重低内存占用
 * 事件驱动，避免轮询等 CPU 密集型代码
-* 默认情况下不对网页进行任何侵入式修改，且脚本运行在独立的沙盒中（依赖脚本管理器实现）避免污染网页
-* 100% 离线运行
+* 默认情况下不对网页进行任何侵入式修改，且脚本运行在独立的上下文中，避免污染网页
+* 100% 离线运行（脚本自动更新功能是脚本管理器通过定期读取脚本元数据段实现的，脚本本身无需联网）
 * 无混淆代码，无商业或恶意行为
 
 ## 已实现功能
