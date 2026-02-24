@@ -4,7 +4,7 @@
 // @name:ru            панель выбора слов
 // @name:zh-CN         快捷划词栏
 // @namespace          https://github.com/CodebyGPT/word_selection_toolbar
-// @version            2026.02.11
+// @version            2026.02.24
 // @description        Introduce a word selection toolbar to all browsers.
 // @description:en     Introduce a word selection toolbar to all browsers.
 // @description:ru     Внедрить панель выбора слов во все браузеры.
@@ -96,6 +96,7 @@ const safeOpenTab = (url, options) => {
         scrollRepaintMode: 'always',
         smartEngine: false,        // 是否启用智能分配
         fallbackEngine: 'bing',   // 不含中文时的备用引擎
+        enableDeleteBtn: true, // 是否显示删除按钮
     };
 
     const SCROLL_REPAINT_MODE = {
@@ -219,6 +220,9 @@ menu_smart_engine: '🧠 智能分配引擎',
 menu_fallback_engine: '🔍 备用搜索引擎',
 val_smart_on: '开启',
 val_smart_off: '关闭',
+menu_delete_btn: '🗑️ 删除按钮可见性',
+val_show: '显示',
+val_hide: '隐藏',
         },
         'en': {
             lang_name: 'English',
@@ -288,6 +292,9 @@ menu_smart_engine: '🧠 Smart Engine',
 menu_fallback_engine: '🔍 Fallback Engine',
 val_smart_on: 'On',
 val_smart_off: 'Off',
+menu_delete_btn: '🗑️ Visibility of the delete button',
+val_show: 'Show',
+val_hide: 'Hide',
         },
         'ru': {
             lang_name: 'Русский',
@@ -357,6 +364,9 @@ menu_smart_engine: '🧠 Умный поиск',
 menu_fallback_engine: '🔍 Резерв поиск',
 val_smart_on: 'Вкл',
 val_smart_off: 'Выкл',
+menu_delete_btn: '🗑️ видимость кнопки удаления',
+val_show: 'Показать',
+val_hide: 'Скрыть',
         }
     };
 
@@ -613,6 +623,13 @@ GM_registerMenuCommand(`${t('scroll_repaint')}: ${modeText[scrollMode]}`, () => 
             location.reload();
         });
 
+// 删除按钮开关
+const showDelete = getConfig('enableDeleteBtn');
+GM_registerMenuCommand(`${t('menu_delete_btn')}: ${showDelete ? t('val_show') : t('val_hide')}`, () => {
+    setConfig('enableDeleteBtn', !showDelete);
+    location.reload();
+});
+
         // 2.6 搜索引擎
         const currentEngineKey = getConfig('searchEngine');
         const engineName = SEARCH_ENGINES[currentEngineKey] ? SEARCH_ENGINES[currentEngineKey].name : 'Custom';
@@ -696,7 +713,7 @@ if (smartOn) {
             location.reload();
         });
 
-        // 2.11 码字防丢设置（功能不稳定目前不对用户展示，暂时注释掉菜单选项）
+        // 2.11 码字防丢设置（代码未完善目前不对用户展示，暂时注释掉菜单选项）
         const recMode = getConfig('inputRecoveryMode');
         const recModeText = { 'off': '已关闭', 'loose': '宽松 (默认)', 'strict': '严格 (完全匹配URL)' };
         //GM_registerMenuCommand(`🛡️ 码字防丢: ${recModeText[recMode] || '宽松'}`, () => {
@@ -1912,6 +1929,24 @@ const isInInput = targetInput !== null;   // 已由调用方传进来
             };
             container.appendChild(cutBtn);
         } 
+            // [新增] 输入区中的删除按钮
+    if (getConfig('enableDeleteBtn') && isInInput) {
+        const div2 = document.createElement('div');
+        div2.className = isCol ? 'divider divider-h' : 'divider divider-v';
+        container.appendChild(div2);
+
+        const delBtn = document.createElement('div');
+        delBtn.className = 'sc-btn';
+        delBtn.innerHTML = `<svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>`;
+        delBtn.title = t('btn_delete');
+        delBtn.onmousedown = (e) => { e.preventDefault(); e.stopPropagation(); };
+        delBtn.onclick = (e) => {
+            e.stopPropagation();
+            document.execCommand('delete');
+            hideUI();
+        };
+        container.appendChild(delBtn);
+    }
         // 搜索按钮 (仅在非编辑区且字数较少时显示)
         else if (!isInInput && !isEditMode && text.trim().length <= 32) {
             const div = document.createElement('div');
