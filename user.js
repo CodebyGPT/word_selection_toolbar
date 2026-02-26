@@ -4,7 +4,7 @@
 // @name:ru            панель выбора слов
 // @name:zh-CN         快捷划词栏
 // @namespace          https://github.com/CodebyGPT/word_selection_toolbar
-// @version            2026.02.24
+// @version            2026.02.26
 // @description        Introduce a word selection toolbar to all browsers.
 // @description:en     Introduce a word selection toolbar to all browsers.
 // @description:ru     Внедрить панель выбора слов во все браузеры.
@@ -557,6 +557,19 @@ val_hide: 'Скрыть',
         
         // 专门处理 blocked_elements 的缓存
         configCache['blocked_elements'] = blockedRules;
+    }
+        // 首次运行时根据时区自动设置搜索引擎（中国时区默认百度、非中国时区默认Google），同时写入 engine_initialized 标记，后续运行跳过此逻辑。
+    async function initDefaultSearchEngine() {
+        const hasInitialized = await safeGetValue('engine_initialized', false);
+        if (!hasInitialized) {
+            const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            const chinaTimeZones = ['Asia/Shanghai', 'Asia/Urumqi'];
+            const defaultEngine = chinaTimeZones.includes(timeZone) ? 'baidu' : 'google';
+            
+            configCache['searchEngine'] = defaultEngine;
+            await safeSetValue('searchEngine', defaultEngine);
+            await safeSetValue('engine_initialized', true);
+        }
     }
     function registerMenus() {
         // 这种做法在某些管理器中可能需要刷新页面才能更新菜单文字，但在现代Tampermonkey中通常有效
@@ -3103,6 +3116,9 @@ function handleInputPasteMouseUp(e) {
         try {
             // 1. 等待配置加载
             await initConfiguration();
+            
+            // 首次运行时根据读取到的时区设置默认搜索引擎
+            await initDefaultSearchEngine();
             
             // 2. 配置加载完后，再注册菜单 (这样菜单里的 getConfig 才能读到正确的值)
             registerMenus();
