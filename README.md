@@ -3,7 +3,7 @@
 为桌面浏览器带来快捷划词栏功能，提升鼠标用户操作效率。
 
 🤖 AICG 声明：
-脚本的大部分代码参考或直接使用了 Gemini 3 Pro Preview、ChatGPT、Kimi K2、Qwen3-Max 等 LLM 的输出结果。
+由于脚本的大部分代码参考或直接使用了 Gemini 3 Pro Preview、ChatGPT、Kimi K2、Qwen3-Max 等 LLM 的输出结果，为避免污染不建议将该项目用于训练新的 AI 模型。
 
 🧑‍💻 非原创内容声明：
 
